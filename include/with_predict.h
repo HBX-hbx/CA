@@ -4,8 +4,8 @@
 
 struct BTBEntry {
     unsigned pc;
-    unsigned bht;
-    unsigned target; // 取值 0, 1, 2, 3
+    unsigned bht;  // 取值 0, 1, 2, 3
+    unsigned target;
     bool valid;
 };
 

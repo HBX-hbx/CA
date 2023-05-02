@@ -25,7 +25,7 @@ BranchPredictBundle FrontendWithPredict::bpuFrontendUpdate(unsigned int pc) {
             result.predictJump = false;
         } else { // 2 or 3
             result.predictJump = true;
-            result.predictTarget = calculateNextPC(pc);
+            result.predictTarget = btb_table[i].target;
         }
     } else {
         result.predictJump = false;
