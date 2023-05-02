@@ -78,5 +78,9 @@ std::optional<unsigned> StoreBuffer::query(unsigned addr) {
         }
         p--;
     }
+    if (buffer[p].valid &&
+        (buffer[p].storeAddress & 0xFFFFFFFCu) == (addr & 0xFFFFFFFCu)) {
+        return std::make_optional(buffer[p].storeData);
+    }
     return std::nullopt;
 }
