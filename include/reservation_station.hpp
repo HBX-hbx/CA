@@ -52,7 +52,6 @@ void ReservationStation<size>::insertInstruction(
         // 1. 若有 slot 空闲，执行插入
         // 2. 插入时，设置两个寄存器读取端口是否已经唤醒，以及对应值，必要时从 ROB 中读取。
         // 3. 寄存器设置 busy
-        // TODO: 寄存器 busy?
         // 4. slot busy，返回
         slot.inst = inst;
         slot.robIdx = robIdx;

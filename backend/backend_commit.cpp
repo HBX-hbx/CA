@@ -107,7 +107,7 @@ bool Backend::commitInstruction([[maybe_unused]] const ROBEntry &entry,
     // EXTRA::EXIT NOTE: Be careful about Store Buffer! NOTE: Be careful about
     // flush!
     // 1. 完成指令提交
-    // 2. (Optional) 更新 bpu
+    // 2. (Optional TODO) 更新 bpu
     // 3. ROB 弹出
     // 4. 若 mispredict，跳转，清空
     // 5. 若提交 Exit，返回 true，否则返回 false
@@ -122,10 +122,28 @@ bool Backend::commitInstruction([[maybe_unused]] const ROBEntry &entry,
             break;
         }
         case FUType::BRU : {
+            // mispredict: 实际上分支但预测不分支，或者实际上不分支但预测分支
+            // jumpTarget: 分支跳转的地址
             if (entry.state.mispredict) {
-                // Optional: BTB
-                frontend.jump(entry.state.jumpTarget);
+                if (entry.state.actualTaken) {
+                    // 预测不分支，但是实际上分支了，进行跳转
+                    frontend.jump(entry.state.jumpTarget);
+                } else {
+                    // 预测分支，但是实际上不分支，进行跳转
+                    frontend.jump(entry.inst.pc + 4);
+                }
                 flush();
+
+            }
+            if (entry.inst == RV32I::BEQ || entry.inst == RV32I::BNE ||
+                entry.inst == RV32I::BLT || entry.inst == RV32I::BGE || 
+                entry.inst == RV32I::BLTU || entry.inst == RV32I::BGEU
+            ) {
+                BpuUpdateData x;
+                x.branchTaken = entry.state.actualTaken; // 实际上分支成功
+                x.jumpTarget = entry.state.jumpTarget;
+                x.pc = entry.inst.pc;
+                frontend.bpuBackendUpdate(x);
             }
             break;
         }

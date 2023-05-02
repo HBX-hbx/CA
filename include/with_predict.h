@@ -1,7 +1,17 @@
 #include "processor.h"
 
 // Optional TODO: Change here to implement predictions
+
+struct BTBEntry {
+    unsigned pc;
+    unsigned bht;
+    unsigned target; // 取值 0, 1, 2, 3
+    bool valid;
+};
+
 class FrontendWithPredict : public Frontend {
+    BTBEntry btb_table[1024];
+
 protected:
     BranchPredictBundle bpuFrontendUpdate(unsigned int pc) override;
 
