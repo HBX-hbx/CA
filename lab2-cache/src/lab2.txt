@@ -1,0 +1,8 @@
+STRIDE: 4B - avg time spent - 1310.87 ms
+STRIDE: 8B - avg time spent - 1338.64 ms
+STRIDE: 16B - avg time spent - 1427.77 ms
+STRIDE: 32B - avg time spent - 1489.42 ms
+STRIDE: 64B - avg time spent - 1320.79 ms
+STRIDE: 128B - avg time spent - 1658.68 ms
+STRIDE: 256B - avg time spent - 1844.92 ms
+STRIDE: 512B - avg time spent - 2268.51 ms

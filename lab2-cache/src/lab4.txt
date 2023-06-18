@@ -1,0 +1,30 @@
+time spent for original method : 5.79324 s
+time spent for new method : 2.40867 s
+time ratio of performance optimization : 2.40516
+time spent for original method : 7.10879 s
+time spent for new method : 2.38955 s
+time ratio of performance optimization : 2.97494
+time spent for original method : 4.41774 s
+time spent for new method : 2.35742 s
+time ratio of performance optimization : 1.87397
+time spent for original method : 8.68168 s
+time spent for new method : 2.41231 s
+time ratio of performance optimization : 3.5989
+time spent for original method : 8.52914 s
+time spent for new method : 2.5024 s
+time ratio of performance optimization : 3.40838
+time spent for original method : 8.27568 s
+time spent for new method : 2.52541 s
+time ratio of performance optimization : 3.27696
+time spent for original method : 5.52437 s
+time spent for new method : 2.48289 s
+time ratio of performance optimization : 2.22498
+time spent for original method : 8.84209 s
+time spent for new method : 2.57648 s
+time ratio of performance optimization : 3.43185
+time spent for original method : 11.7632 s
+time spent for new method : 2.63929 s
+time ratio of performance optimization : 4.45695
+time spent for original method : 6.31679 s
+time spent for new method : 2.59928 s
+time ratio of performance optimization : 2.43021

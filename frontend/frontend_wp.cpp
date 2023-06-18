@@ -16,7 +16,6 @@ FrontendWithPredict::FrontendWithPredict(const std::vector<unsigned> &inst)
  */
 BranchPredictBundle FrontendWithPredict::bpuFrontendUpdate(unsigned int pc) {
     // Optional TODO: branch predictions
-    // do nothing
     BranchPredictBundle result;
     unsigned i = (pc >> 2) % 1024;
     if (btb_table[i].valid && btb_table[i].pc == pc) {
@@ -89,5 +88,4 @@ void FrontendWithPredict::bpuBackendUpdate(const BpuUpdateData &x) {
             btb_table[i].bht = 0;
         }
     }
-
 }

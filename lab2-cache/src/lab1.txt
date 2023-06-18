@@ -1,0 +1,12 @@
+1KB - avg time spent - 1012.83 ms
+2KB - avg time spent - 1079.55 ms
+4KB - avg time spent - 993.045 ms
+8KB - avg time spent - 1008.18 ms
+16KB - avg time spent - 974.222 ms
+32KB - avg time spent - 1010.49 ms
+64KB - avg time spent - 1753.28 ms
+128KB - avg time spent - 1796.38 ms
+256KB - avg time spent - 2114.85 ms
+512KB - avg time spent - 3080.36 ms
+1024KB - avg time spent - 3261.47 ms
+2048KB - avg time spent - 3242.52 ms

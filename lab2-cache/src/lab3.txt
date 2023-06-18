@@ -1,0 +1,8 @@
+TEST_ASSOCIATIVITY: 1 - avg time spent - 2063.29 ms
+TEST_ASSOCIATIVITY: 2 - avg time spent - 2460.84 ms
+TEST_ASSOCIATIVITY: 4 - avg time spent - 2522.18 ms
+TEST_ASSOCIATIVITY: 8 - avg time spent - 4416.57 ms
+TEST_ASSOCIATIVITY: 16 - avg time spent - 3591.72 ms
+TEST_ASSOCIATIVITY: 32 - avg time spent - 2253.29 ms
+TEST_ASSOCIATIVITY: 64 - avg time spent - 2111.59 ms
+TEST_ASSOCIATIVITY: 128 - avg time spent - 2066.15 ms
