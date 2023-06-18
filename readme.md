@@ -1,6 +1,4 @@
-# Tomasulo 模拟器
-
-2023 计算机系统结构 Tomasulo 模拟器实验框架
+# Tomasulo 模拟器 && 缓存测量实验
 
 指令集使用 RISC-V 32 IM
 
@@ -22,6 +20,7 @@
 ├── readme.md 
 ├── test                # 测试用户程序
 └── thirdparty          # 第三方代码
+└── lab2-cache          # 缓存测量实验
 ```
 
 ## 注意事项
@@ -76,26 +75,4 @@ make
 ```
 
 若最后一行显示：`[   OK    ] 16 testcase(s) passed`，则说明当前测例通过，可以继续测试其他测例。
-
-所有需要实现 / 修改的地方已经使用 `TODO:` 标出，可以全局搜索进行定位。
-
-请不要修改任何没有使用 `TODO:` 标记出的文件，这可能会导致你无法通过后续测试。
-
-## 关于 Gitlab CI **（！重要！）**
-
-正常情况下，当你执行 `git push`将本地仓库push到远端后，gitlab即会将你的评测任务加入到执行队列中。
-
-为了保证 `Gitlab CI` 的正常运行，**请不要修改 `.gitlab-ci.yml` ，请不要修改 `.gitlab-ci.yml` ，请不要修改 `.gitlab-ci.yml` 。**
-
-### CI任务说明
-
-运行的任务包含两个，分别为 `job 1` 和 `job 2` 。 `job 1` 对应Tomasulo调度的测试（不包括分支预测）。 `job 2` 对应包含了分支预测的测试。
-
-针对完成或者没有完成分支预测选作内容，你应该对仓库内的文件进行如下的修改。
-
-#### 我完成了Tomasulo后端，不包括分支预测
-请将 `check_predict.sh` 文件中第一行的 `export CHECK=true` 改为 `export CHECK=false` 。
-
-#### 我完成了选作内容（分支预测）
-请确保 `check_predict.sh` 文件中第一行为 `export CHECK=true` 。
 
